@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: spring-container
-          image: spring-server
+          image: spring-server:1.0
           imagePullPolicy: IfNotPresent # 로컬에서 이미지를 먼저 가져온다. 없으면 레지스트리에서 가져온다.
           ports:
             - containerPort: 8080 # 컨테이너에서 사용하는 포트를 명시적으로 표현
