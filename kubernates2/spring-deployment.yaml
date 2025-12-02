@@ -25,6 +25,12 @@ spec:
 
           env:
             - name: MY_ACCOUNT
-              value: chaiminwoo0223
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: my-account
             - name: MY_PASSWORD
-              value: a1234
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: my-password
