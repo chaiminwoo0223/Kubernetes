@@ -6,11 +6,10 @@ metadata:
   name: mysql-service # Service 이름
 
 spec:
-  type: NodePort # Service 종류
+  type: ClusterIP # Service 종류
   selector:
     app: mysql-db # 실행되고 있는 파드 중 'mysql-db'라는 값을 가진 파드와 서비스를 연결
   ports:
     - protocol: TCP # 서비스에 접속하기 위한 프로토콜
-      nodePort: 30002 # 외부에서 사용자들이 접근하게 될 포트 번호
       port: 3306 # 쿠버네티스 내부에서 서비스에 접속하기 위한 포트 번호
       targetPort: 3306 # 매핑하기 위한 파드 포트 번호
