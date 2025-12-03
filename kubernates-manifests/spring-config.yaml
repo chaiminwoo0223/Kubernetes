@@ -7,6 +7,6 @@ metadata:
 
 # Key, Value 형식으로 설정값 저장
 data:
-  db-host: _____________
+  db-host: xxx
   db-port: "3306"
   db-name: mydb
